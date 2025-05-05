@@ -8,13 +8,29 @@ This repository provides a reproducible workflow for analyzing global mental hea
 - Perform **meta-regression** analyses using each of the 60 income-level indicators, along with selected bibliometric indicators, as individual moderators for the meta-analysis results
 
 
-## Repository contents
-This repository includes the scripts:
-- `pre_analysis.R`: This script organizes and defines the indicator groups. It includes data preprocessing tasks, such as reading external datasets and merging indicators from various sources.
-  
-- `main_analysis.R`: Asign the indicators' roles (dependent or independent), executes the primary regression models by income group, runs meta-analyses on the regression results, and meta-regression analyses.
+## Repository Contents:
+This repository comprises the following main directories and files:
 
-- `plots.R`: Contains functions and procedures to visualize the results using `ggplot2`.
+### **Root Directory**:
+- **`LICENSE`**: License file for the project, describing terms of use and distribution.
+- **`README.md`**: This file provides an overview of the project, including its purpose, analyses, and structure.
+
+### **Subdirectories**:
+
+#### 1. **`data`**:
+Contains supplementary data files used in the analyses:
+- **`Supplementary Material 1.xlsx`**: Dataset containing the regression results.
+- **`Supplementary Material 2.xlsx`**: Dataset with meta-analysis results.
+- **`Supplementary Material 3.xlsx`**: Dataset with meta-regression results.
+- **`moderators_income.xlsx`**: Dataset containing moderators used for meta-regression analyses and plots.
+
+#### 2. **`src`**:
+Contains R scripts for preparing data, running analyses, and visualizing results:
+- **`pre_analysis.R`**: Handles data preprocessing tasks, normalization, and integration of indicators from various sources.
+- **`main_analysis.R`**: Executes key analyses, including regression models, meta-analyses, and meta-regression analyses, along with assigning roles to indicators.
+- **`plots.R`**: Generates various visualization outputs, including regression plots and heatmaps.
+
+This directory structure organizes all scripts and supplementary data systematically for improved workflow and reproducibility.
 
 ## Data Sources and Preprocessing
 A total of **386,671 mental health research articles** were included in the analysis. Metadata included **publication year**, **country of the first author**, **journal H-index**, **citations**, **open access status**, and **journal quartile**. Each article was assigned to one of the **income groups** based on the first author's country, as classified by the World Bank.
